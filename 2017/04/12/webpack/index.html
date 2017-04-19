@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="https://holidaying.github.io">
+  <title>16个demo，webpack+react搭配使用 | 西安小哥、生命不止、折腾不息</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="16个demo，webpack+react搭配使用首先教大家2个新技能
+
+1.按照正常github地址情况下，你的github本身不能访问目录。
+
+例如要访问vue-demo下的vueCpu文件夹:https://github.com/holidaying/vue-demo/vueCpu（显示404）但是在目录上加上tree/master/：https://github.com/holidayin">
+<meta property="og:type" content="article">
+<meta property="og:title" content="16个demo，webpack+react搭配使用">
+<meta property="og:url" content="https://holidaying.github.io/2017/04/12/webpack/index.html">
+<meta property="og:site_name" content="西安小哥、生命不止、折腾不息">
+<meta property="og:description" content="16个demo，webpack+react搭配使用首先教大家2个新技能
+
+1.按照正常github地址情况下，你的github本身不能访问目录。
+
+例如要访问vue-demo下的vueCpu文件夹:https://github.com/holidaying/vue-demo/vueCpu（显示404）但是在目录上加上tree/master/：https://github.com/holidayin">
+<meta property="og:updated_time" content="2017-04-12T07:07:51.243Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="16个demo，webpack+react搭配使用">
+<meta name="twitter:description" content="16个demo，webpack+react搭配使用首先教大家2个新技能
+
+1.按照正常github地址情况下，你的github本身不能访问目录。
+
+例如要访问vue-demo下的vueCpu文件夹:https://github.com/holidaying/vue-demo/vueCpu（显示404）但是在目录上加上tree/master/：https://github.com/holidayin">
+  
+    <link rel="alternative" href="/atom.xml" title="西安小哥、生命不止、折腾不息" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" type="text/css" href="/./main.05aabf.css">
+  <style type="text/css">
+  
+    #container.show {
+      background: linear-gradient(200deg,#a0cfe4,#e8c37e);
+    }
+  </style>
+  
+
+  
+
+</head>
+
+<body>
+  <div id="container" q-class="show:isCtnShow">
+    <canvas id="anm-canvas" class="anm-canvas"></canvas>
+    <div class="left-col" q-class="show:isShow">
+      
+<div class="overlay" style="background: #4d4d4d"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			<img src="https://avatars2.githubusercontent.com/u/12896717" class="js-avatar">
+		</a>
+		<hgroup>
+		  <h1 class="header-author"><a href="/">西安小哥</a></h1>
+		</hgroup>
+		
+		<p class="header-subtitle">生命不止、折腾不息</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/tags/">随笔</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+    		
+    			
+    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
+    			
+            
+    			
+    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/holidaying" title="github"><i class="icon-github"></i></a>
+		        
+					<a class="segmentfault" target="_blank" href="https://segmentfault.com/u/holidaying" title="segmentfault"><i class="icon-segmentfault"></i></a>
+		        
+					<a class="jianshu" target="_blank" href="http://www.jianshu.com/u/98e9a5c58e66" title="jianshu"><i class="icon-jianshu"></i></a>
+		        
+					<a class="mail" target="_blank" href="mailto:workliudan@163.com" title="mail"><i class="icon-mail"></i></a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
+      
+<nav id="mobile-nav">
+  	<div class="overlay js-overlay" style="background: #4d4d4d"></div>
+	<div class="btnctn js-mobile-btnctn">
+  		<div class="slider-trigger list" q-on="click: openSlider(e)"><i class="icon icon-sort"></i></div>
+	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img src="https://avatars2.githubusercontent.com/u/12896717" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author js-header-author">西安小哥</h1>
+			</hgroup>
+			
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>生命不止、折腾不息<i class="icon icon-quo-right"></i></p>
+			
+			
+			
+				
+			
+				
+			
+			
+			
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/holidaying" title="github"><i class="icon-github"></i></a>
+			        
+						<a class="segmentfault" target="_blank" href="https://segmentfault.com/u/holidaying" title="segmentfault"><i class="icon-segmentfault"></i></a>
+			        
+						<a class="jianshu" target="_blank" href="http://www.jianshu.com/u/98e9a5c58e66" title="jianshu"><i class="icon-jianshu"></i></a>
+			        
+						<a class="mail" target="_blank" href="mailto:workliudan@163.com" title="mail"><i class="icon-mail"></i></a>
+			        
+				</div>
+			</nav>
+
+			<nav class="header-menu js-header-menu">
+				<ul style="width: 50%">
+				
+				
+					<li style="width: 50%"><a href="/">主页</a></li>
+		        
+					<li style="width: 50%"><a href="/tags/">随笔</a></li>
+		        
+				</ul>
+			</nav>
+		</header>				
+	</div>
+	<div class="mobile-mask" style="display:none" q-show="isShow"></div>
+</nav>
+
+      <div id="wrapper" class="body-wrap">
+        <div class="menu-l">
+          <div class="canvas-wrap">
+            <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
+          </div>
+          <div id="js-content" class="content-ll">
+            <article id="post-webpack" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      16个demo，webpack+react搭配使用
+    </h1>
+  
+
+        
+        <a href="/2017/04/12/webpack/" class="archive-article-date">
+  	<time datetime="2017-04-12T06:59:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>16个demo，webpack+react搭配使用<br>首先教大家2个新技能</p>
+<ul>
+<li><p>1.按照正常github地址情况下，你的github本身不能访问目录。</p>
+</li>
+<li><p>例如要访问vue-demo下的vueCpu文件夹:<a href="https://github.com/holidaying/vue-demo/vueCpu（显示404）但是在目录上加上tree/master/：https://github.com/holidaying/vue-demo/tree/master/vueCpu" target="_blank" rel="external">https://github.com/holidaying/vue-demo/vueCpu（显示404）但是在目录上加上tree/master/：https://github.com/holidaying/vue-demo/tree/master/vueCpu</a> （master是分支名）就可以访问。</p>
+<a id="more"></a></li>
+<li>2.github目录的制作</li>
+<li>明确一个问题。一个标题就是一个目录名称</li>
+<li>写法[xx](#题目名称)#不能少</li>
+<li>题目名称的写法规则：abc_demo-&gt; abc-demo,Abc-Demo-&gt;abc-demo。即就是题目中所有可见字符空格，以及其他字符均用-连接，并且全为小写</li>
+</ul>
+<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><p>首先，install <a href="https://www.npmjs.com/package/webpack" target="_blank" rel="external">Webpack</a> 和 <a href="https://www.npmjs.com/package/webpack-dev-server" target="_blank" rel="external">webpack-dev-server</a>.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm i -g webpack webpack-dev-server</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"># Linux &amp; Mac</div><div class="line">$ git clone git@github.com:holidaying/webpack-demos.git</div><div class="line"></div><div class="line"># Windows</div><div class="line">$ git clone https://github.com/holidaying/webpack-demos.git</div><div class="line">:</div><div class="line">$ cd webpack-demos</div><div class="line">$ npm install</div></pre></td></tr></table></figure>
+<p>接下来就可以进行demo演示了.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ cd demo01</div><div class="line">$ webpack-dev-server</div></pre></td></tr></table></figure>
+<p>用浏览器访问 <a href="http://127.0.0.1:8080" target="_blank" rel="external">http://127.0.0.1:8080</a>.</p>
+<h2 id="什么是webpack？"><a href="#什么是webpack？" class="headerlink" title="什么是webpack？"></a>什么是webpack？</h2><p>Webpack 是前端的打包工具类类似于 Grunt and Gulp.但是有区别，因为它是模块化构建机制，Webpack可以看做是模块打包机：它做的事情是，分析你的项目结构，找到JavaScript模块以及其它的一些浏览器不能直接运行的拓展语言（Scss，TypeScript等），并将其打包为合适的格式以供浏览器使用。<br>WebPack和Grunt以及Gulp相比有什么特性<br>其实Webpack和另外两个并没有太多的可比性，Gulp/Grunt是一种能够优化前端的开发流程的工具，而WebPack是一种模块化的解决方案，不过Webpack的优点使得Webpack可以替代Gulp/Grunt类的工具。<br>Grunt和Gulp的工作方式是：在一个配置文件中，指明对某些文件进行类似编译，组合，压缩等任务的具体步骤，这个工具之后可以自动替你完成这些任务。<br><a href="http://webpack.github.io/docs/what-is-webpack.html" target="_blank" rel="external">更多信息</a>.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">$ webpack main.js bundle.js</div></pre></td></tr></table></figure></p>
+<p>它的配置文件是 <code>webpack.config.js</code>.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// webpack.config.js</span></div><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">  <span class="attr">entry</span>: <span class="string">'./main.js'</span>,</div><div class="line">  <span class="attr">output</span>: &#123;</div><div class="line">    <span class="attr">filename</span>: <span class="string">'bundle.js'</span></div><div class="line">  &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>有了<code>webpack.config.js</code>,你可以不带参数使用webpack</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ webpack</div></pre></td></tr></table></figure>
+<p>一些命令行选项你应该知道。</p>
+<ul>
+<li><code>webpack</code> – 构建文件</li>
+<li><code>webpack -p</code> – 发布</li>
+<li><code>webpack --watch</code> – 监听项目</li>
+<li><code>webpack -d</code> – 包含 source maps方便调试</li>
+<li><code>webpack --colors</code> – 让打包界面更好看</li>
+</ul>
+<p>去构建你的项目, 你可以把启动项写进package.json</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// package.json</span></div><div class="line">&#123;</div><div class="line">  <span class="comment">// ...</span></div><div class="line">  <span class="string">"scripts"</span>: &#123;</div><div class="line">    <span class="string">"dev"</span>: <span class="string">"webpack-dev-server --devtool eval --progress --colors"</span>,</div><div class="line">    <span class="string">"deploy"</span>: <span class="string">"NODE_ENV=production webpack -p"</span></div><div class="line">  &#125;,</div><div class="line">  <span class="comment">// ...</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ol>
+<li><a href="#demo01-单文件入口-源码">单文件入口</a></li>
+<li><a href="#demo02-多文件入口-源码">多文件入口</a></li>
+<li><a href="#demo03-babel-loader-源码">Babel-loader</a></li>
+<li><a href="#demo04-css-loader-源码">CSS-loader</a></li>
+<li><a href="#demo05-image-loader-源码">Image loader</a></li>
+<li><a href="#demo06-css-module-源码">CSS Module</a></li>
+<li><a href="#demo07-uglifyjs-plugin-源码">UglifyJs Plugin插件</a></li>
+<li><a href="#demo08-html-webpack-plugin-and-open-browser-webpack-plugin-源码">HTML Webpack Plugin and Open Browser Webpack Plugin</a></li>
+<li><a href="#demo09-environment-flags-源码">Environment flags环境变量</a></li>
+<li><a href="#demo10-code-splitting-源码">Code splitting代码分割</a></li>
+<li><a href="#demo11-code-splitting-with-bundle-loader-源码">Code splitting with bundle-loader</a></li>
+<li><a href="#demo12-common-chunk-源码">Common chunk提取公共文件</a></li>
+<li><a href="#demo13-vendor-chunk-源码">Vendor chunk提取公共的第三方代码</a></li>
+<li><a href="#demo14-exposing-global-variables-源码">externals全局变量</a></li>
+<li><a href="#demo15-热模块替换-热更新">热模块替代/热更新</a></li>
+<li><a href="#demo16-react-router--源码">React router</a></li>
+</ol>
+<h2 id="Demo01-单文件入口-源码"><a href="#Demo01-单文件入口-源码" class="headerlink" title="Demo01: 单文件入口 (源码)"></a>Demo01: 单文件入口 (<a href="https://github.com/holidaying/webpack-demos/tree/master/demo01" target="_blank" rel="external">源码</a>)</h2><p>Webpack会入口文件进行打包成bundle.js.</p>
+<p>例子, <code>main.js</code> 是单文件入口.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// main.js</span></div><div class="line"><span class="built_in">document</span>.write(<span class="string">'&lt;h1&gt;Hello World&lt;/h1&gt;'</span>);</div></pre></td></tr></table></figure>
+<p>index.html</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"bundle.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>Webpack follows <code>webpack.config.js</code> to build <code>bundle.js</code>.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// webpack.config.js</span></div><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">  <span class="attr">entry</span>: <span class="string">'./main.js'</span>,</div><div class="line">  <span class="attr">output</span>: &#123;</div><div class="line">    <span class="attr">filename</span>: <span class="string">'bundle.js'</span></div><div class="line">  &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>启动服务, 访问 <a href="http://127.0.0.1:8080" target="_blank" rel="external">http://127.0.0.1:8080</a> .</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ webpack-dev-server</div></pre></td></tr></table></figure>
+<h2 id="Demo02-多文件入口-源码"><a href="#Demo02-多文件入口-源码" class="headerlink" title="Demo02: 多文件入口(源码)"></a>Demo02: 多文件入口(<a href="https://github.com/holidaying/webpack-demos/tree/master/demo02" target="_blank" rel="external">源码</a>)</h2><p>多个入口文件，实用于多个页面的应用</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// main1.js</span></div><div class="line"><span class="built_in">document</span>.write(<span class="string">'&lt;h1&gt;Hello World&lt;/h1&gt;'</span>);</div><div class="line"></div><div class="line"><span class="comment">// main2.js</span></div><div class="line"><span class="built_in">document</span>.write(<span class="string">'&lt;h2&gt;Hello Webpack&lt;/h2&gt;'</span>);</div></pre></td></tr></table></figure>
+<p>index.html</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"bundle1.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"bundle2.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>webpack.config.js</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">  <span class="attr">entry</span>: &#123;</div><div class="line">    <span class="attr">bundle1</span>: <span class="string">'./main1.js'</span>,</div><div class="line">    <span class="attr">bundle2</span>: <span class="string">'./main2.js'</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">output</span>: &#123;</div><div class="line">    <span class="attr">filename</span>: <span class="string">'[name].js'</span></div><div class="line">  &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<h2 id="Demo03-Babel-loader-源码"><a href="#Demo03-Babel-loader-源码" class="headerlink" title="Demo03: Babel-loader (源码)"></a>Demo03: Babel-loader (<a href="https://github.com/holidaying/webpack-demos/tree/master/demo03" target="_blank" rel="external">源码</a>)</h2><p>通过使用不同的loader，webpack通过调用外部的脚本或工具可以对各种各样的格式的文件进行处理(<a href="http://webpack.github.io/docs/using-loaders.html" target="_blank" rel="external">更多信息</a>). 例如, <a href="https://www.npmjs.com/package/babel-loader" target="_blank" rel="external">Babel-loader</a> Babel其实是一个编译JavaScript的平台可以将 JSX/ES6 文件转换成浏览器可以识别的js文件. 官方文档<a href="http://webpack.github.io/docs/list-of-loaders.html" target="_blank" rel="external">loaders</a>.</p>
+<p><code>main.jsx</code> is a JSX 文件.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> React = <span class="built_in">require</span>(<span class="string">'react'</span>);</div><div class="line"><span class="keyword">const</span> ReactDOM = <span class="built_in">require</span>(<span class="string">'react-dom'</span>);</div><div class="line"></div><div class="line">ReactDOM.render(</div><div class="line">  <span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello, world!<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span>,</div><div class="line">  <span class="built_in">document</span>.querySelector(<span class="string">'#wrapper'</span>)</div><div class="line">);</div></pre></td></tr></table></figure>
+<p>index.html</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"wrapper"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"bundle.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>webpack.config.js</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">  <span class="attr">entry</span>: <span class="string">'./main.jsx'</span>,</div><div class="line">  <span class="attr">output</span>: &#123;</div><div class="line">    <span class="attr">filename</span>: <span class="string">'bundle.js'</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">module</span>: &#123;</div><div class="line">    <span class="attr">loaders</span>:[</div><div class="line">      &#123;</div><div class="line">        <span class="attr">test</span>: <span class="regexp">/\.js[x]?$/</span>,</div><div class="line">        <span class="attr">exclude</span>: <span class="regexp">/node_modules/</span>,</div><div class="line">        <span class="attr">loader</span>: <span class="string">'babel-loader?presets[]=es2015&amp;presets[]=react'</span></div><div class="line">      &#125;,</div><div class="line">    ]</div><div class="line">  &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>在 <code>webpack.config.js</code>, <code>module.loaders</code> 区域是用来分配loader的. 像上面的代码片段使用了 <code>babel-loader</code> 需要安装插件 <a href="https://www.npmjs.com/package/babel-preset-es2015" target="_blank" rel="external">babel-preset-es2015</a> 和 <a href="https://www.npmjs.com/package/babel-preset-react" target="_blank" rel="external">babel-preset-react</a> to 编译成 ES6 and React. 可以用query配置参数</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">module</span>: &#123;</div><div class="line">  <span class="attr">loaders</span>: [</div><div class="line">    &#123;</div><div class="line">      <span class="attr">test</span>: <span class="regexp">/\.jsx?$/</span>,</div><div class="line">      <span class="attr">exclude</span>: <span class="regexp">/node_modules/</span>,</div><div class="line">      <span class="attr">loader</span>: <span class="string">'babel'</span>,</div><div class="line">      <span class="attr">query</span>: &#123;</div><div class="line">        <span class="attr">presets</span>: [<span class="string">'es2015'</span>, <span class="string">'react'</span>]</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  ]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="Demo04-CSS-loader-源码"><a href="#Demo04-CSS-loader-源码" class="headerlink" title="Demo04: CSS-loader (源码)"></a>Demo04: CSS-loader (<a href="https://github.com/holidaying/webpack-demos/tree/master/demo04" target="_blank" rel="external">源码</a>)</h2><p>Webpack 允许你在js文件中require CSS , 通过 CSS-loader来预处理css文件.</p>
+<p>main.js</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">require</span>(<span class="string">'./app.css'</span>);</div></pre></td></tr></table></figure>
+<p>app.css</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">body</span> &#123;</div><div class="line">  <span class="attribute">background-color</span>: blue;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>index.html</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"bundle.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello World<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>webpack.config.js</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">  <span class="attr">entry</span>: <span class="string">'./main.js'</span>,</div><div class="line">  <span class="attr">output</span>: &#123;</div><div class="line">    <span class="attr">filename</span>: <span class="string">'bundle.js'</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">module</span>: &#123;</div><div class="line">    <span class="attr">loaders</span>:[</div><div class="line">      &#123; <span class="attr">test</span>: <span class="regexp">/\.css$/</span>, <span class="attr">loader</span>: <span class="string">'style-loader!css-loader'</span> &#125;,</div><div class="line">    ]</div><div class="line">  &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>但是,你需要使用2中loaders来转换CSS 文件. 第一个是 <a href="https://www.npmjs.com/package/css-loader" target="_blank" rel="external">CSS-loader</a> 来读取CSS文件, 另外一个是<a href="https://www.npmjs.com/package/style-loader" target="_blank" rel="external">Style-loader</a> 是将style样式插入到html中。 中间用！连接</p>
+<p>启动服务后, <code>index.html</code> 有内部样式.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"bundle.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="css"></span></div><div class="line">    <span class="selector-tag">body</span> &#123;</div><div class="line">      <span class="attribute">background-color</span>: blue;</div><div class="line">    &#125;</div><div class="line">  <span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="Demo05-Image-loader-源码"><a href="#Demo05-Image-loader-源码" class="headerlink" title="Demo05: Image loader (源码)"></a>Demo05: Image loader (<a href="https://github.com/holidaying/webpack-demos/tree/master/demo05" target="_blank" rel="external">源码</a>)</h2><p>Webpack 允许你在js文件中require图片 , 通过 url-loader和file-loader来预处理图片文件.</p>
+<p>main.js</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> img1 = <span class="built_in">document</span>.createElement(<span class="string">"img"</span>);</div><div class="line">img1.src = <span class="built_in">require</span>(<span class="string">"./small.png"</span>);</div><div class="line"><span class="built_in">document</span>.body.appendChild(img1);</div><div class="line"></div><div class="line"><span class="keyword">var</span> img2 = <span class="built_in">document</span>.createElement(<span class="string">"img"</span>);</div><div class="line">img2.src = <span class="built_in">require</span>(<span class="string">"./big.png"</span>);</div><div class="line"><span class="built_in">document</span>.body.appendChild(img2);</div></pre></td></tr></table></figure>
+<p>index.html</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"bundle.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>webpack.config.js</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">  <span class="attr">entry</span>: <span class="string">'./main.js'</span>,</div><div class="line">  <span class="attr">output</span>: &#123;</div><div class="line">    <span class="attr">filename</span>: <span class="string">'bundle.js'</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">module</span>: &#123;</div><div class="line">    <span class="attr">loaders</span>:[</div><div class="line">      &#123; <span class="attr">test</span>: <span class="regexp">/\.(png|jpg)$/</span>, <span class="attr">loader</span>: <span class="string">'url-loader?limit=8192'</span> &#125;</div><div class="line">    ]</div><div class="line">  &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p><a href="https://www.npmjs.com/package/url-loader" target="_blank" rel="external">url-loader</a> 转换图片文件. 如果图片的大小小于 8192 bytes,它将会转成base64位的地址; 相反, 它就是普通地址.<br>参数前是用？连接的</p>
+<p>启动服务后, <code>small.png</code> and <code>big.png</code> 将会有一下的地址.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"data:image/png;base64,iVBOR...uQmCC"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"4853ca667a2b8b8844eb2693ac1b2578.png"</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="Demo06-CSS-Module-源码"><a href="#Demo06-CSS-Module-源码" class="headerlink" title="Demo06: CSS Module (源码)"></a>Demo06: CSS Module (<a href="https://github.com/holidaying/webpack-demos/tree/master/demo06" target="_blank" rel="external">源码</a>)</h2><p><code>css-loader?modules</code> (the query parameter modules) enables the <a href="https://github.com/css-modules/css-modules" target="_blank" rel="external">CSS Modules</a> spec.</p>
+<p>CSS Module可以开启全局变量和局部变量，:global(…)表示全局变量，可以在全局中使用样式(<a href="https://css-modules.github.io/webpack-demo/" target="_blank" rel="external">更多信息</a>)</p>
+<p>index.html</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">h1</span> <span class="attr">class</span>=<span class="string">"h1"</span>&gt;</span>Hello World<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">h2</span> <span class="attr">class</span>=<span class="string">"h2"</span>&gt;</span>Hello Webpack<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"example"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./bundle.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>app.css</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.h1</span> &#123;</div><div class="line">  <span class="attribute">color</span>:red;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-pseudo">:global(.h2)</span> &#123;</div><div class="line">  <span class="attribute">color</span>: blue;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>main.jsx</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> React = <span class="built_in">require</span>(<span class="string">'react'</span>);</div><div class="line"><span class="keyword">var</span> ReactDOM = <span class="built_in">require</span>(<span class="string">'react-dom'</span>);</div><div class="line"><span class="keyword">var</span> style = <span class="built_in">require</span>(<span class="string">'./app.css'</span>);</div><div class="line"></div><div class="line">ReactDOM.render(</div><div class="line">  <span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></div><div class="line">    <span class="tag">&lt;<span class="name">h1</span> <span class="attr">className</span>=<span class="string">&#123;style.h1&#125;</span>&gt;</span>Hello World<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">h2</span> <span class="attr">className</span>=<span class="string">"h2"</span>&gt;</span>Hello Webpack<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span>,</div><div class="line">  <span class="built_in">document</span>.getElementById(<span class="string">'example'</span>)</div><div class="line">);</div></pre></td></tr></table></figure>
+<p>webpack.config.js</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">  <span class="attr">entry</span>: <span class="string">'./main.jsx'</span>,</div><div class="line">  <span class="attr">output</span>: &#123;</div><div class="line">    <span class="attr">filename</span>: <span class="string">'bundle.js'</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">module</span>: &#123;</div><div class="line">    <span class="attr">loaders</span>:[</div><div class="line">      &#123;</div><div class="line">        <span class="attr">test</span>: <span class="regexp">/\.js[x]?$/</span>,</div><div class="line">        <span class="attr">exclude</span>: <span class="regexp">/node_modules/</span>,</div><div class="line">        <span class="attr">loader</span>: <span class="string">'babel-loader'</span>,</div><div class="line">        <span class="attr">query</span>: &#123;</div><div class="line">          <span class="attr">presets</span>: [<span class="string">'es2015'</span>, <span class="string">'react'</span>]</div><div class="line">        &#125;</div><div class="line">      &#125;,</div><div class="line">      &#123;</div><div class="line">        <span class="attr">test</span>: <span class="regexp">/\.css$/</span>,</div><div class="line">        <span class="attr">loader</span>: <span class="string">'style-loader!css-loader?modules'</span></div><div class="line">      &#125;</div><div class="line">    ]</div><div class="line">  &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>启动服务.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ webpack-dev-server</div></pre></td></tr></table></figure>
+<p>访问 <a href="http://127.0.0.1:8080" target="_blank" rel="external">http://127.0.0.1:8080</a> , 你将看到只有第二个 <code>h1</code> 是红的,因为它是局部, 同时 <code>h2</code> 是蓝色的, 因为是<code>h2</code>全局的.</p>
+<h2 id="Demo07-UglifyJs-Plugin-源码"><a href="#Demo07-UglifyJs-Plugin-源码" class="headerlink" title="Demo07: UglifyJs Plugin (源码)"></a>Demo07: UglifyJs Plugin (<a href="https://github.com/holidaying/webpack-demos/tree/master/demo07" target="_blank" rel="external">源码</a>)</h2><p>Webpack 可以去掉本身附加的东西，优化代码 <a href="http://webpack.github.io/docs/list-of-plugins.html#uglifyjsplugin" target="_blank" rel="external">UglifyJs Plugin</a> will minify output(<code>bundle.js</code>) JS codes.</p>
+<p>main.js</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> longVariableName = <span class="string">'Hello'</span>;</div><div class="line">longVariableName += <span class="string">' World'</span>;</div><div class="line"><span class="built_in">document</span>.write(<span class="string">'&lt;h1&gt;'</span> + longVariableName + <span class="string">'&lt;/h1&gt;'</span>);</div></pre></td></tr></table></figure>
+<p>index.html</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"bundle.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>webpack.config.js</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> webpack = <span class="built_in">require</span>(<span class="string">'webpack'</span>);</div><div class="line"><span class="keyword">var</span> uglifyJsPlugin = webpack.optimize.UglifyJsPlugin;</div><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">  <span class="attr">entry</span>: <span class="string">'./main.js'</span>,</div><div class="line">  <span class="attr">output</span>: &#123;</div><div class="line">    <span class="attr">filename</span>: <span class="string">'bundle.js'</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">plugins</span>: [</div><div class="line">    <span class="keyword">new</span> uglifyJsPlugin(&#123;</div><div class="line">      <span class="attr">compress</span>: &#123;</div><div class="line">        <span class="attr">warnings</span>: <span class="literal">false</span></div><div class="line">      &#125;</div><div class="line">    &#125;)</div><div class="line">  ]</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>启动服务后, <code>main.js</code> 将会压缩如下.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> o=<span class="string">"Hello"</span>;o+=<span class="string">" World"</span>,<span class="built_in">document</span>.write(<span class="string">"&lt;h1&gt;"</span>+o+<span class="string">"&lt;/h1&gt;"</span>)</div></pre></td></tr></table></figure>
+<h2 id="Demo08-HTML-Webpack-Plugin-and-Open-Browser-Webpack-Plugin-源码"><a href="#Demo08-HTML-Webpack-Plugin-and-Open-Browser-Webpack-Plugin-源码" class="headerlink" title="Demo08: HTML Webpack Plugin and Open Browser Webpack Plugin (源码)"></a>Demo08: HTML Webpack Plugin and Open Browser Webpack Plugin (<a href="https://github.com/holidaying/webpack-demos/tree/master/demo08" target="_blank" rel="external">源码</a>)</h2><p>这个例子需要加载三个插件</p>
+<p><a href="https://github.com/ampedandwired/html-webpack-plugin" target="_blank" rel="external">html-webpack-plugin</a> 创建 <code>index.html</code> ，<a href="https://github.com/baldore/open-browser-webpack-plugin" target="_blank" rel="external">open-browser-webpack-plugin</a> 打开浏览器</p>
+<p>main.js</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">document</span>.write(<span class="string">'&lt;h1&gt;Hello World&lt;/h1&gt;'</span>);</div></pre></td></tr></table></figure>
+<p>webpack.config.js</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> HtmlwebpackPlugin = <span class="built_in">require</span>(<span class="string">'html-webpack-plugin'</span>);</div><div class="line"><span class="keyword">var</span> OpenBrowserPlugin = <span class="built_in">require</span>(<span class="string">'open-browser-webpack-plugin'</span>);</div><div class="line"></div><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">  <span class="attr">entry</span>: <span class="string">'./main.js'</span>,</div><div class="line">  <span class="attr">output</span>: &#123;</div><div class="line">    <span class="attr">filename</span>: <span class="string">'bundle.js'</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">plugins</span>: [</div><div class="line">    <span class="keyword">new</span> HtmlwebpackPlugin(&#123;</div><div class="line">      <span class="attr">title</span>: <span class="string">'Webpack-demos'</span>,</div><div class="line">      <span class="attr">filename</span>: <span class="string">'index.html'</span></div><div class="line">    &#125;),</div><div class="line">    <span class="keyword">new</span> OpenBrowserPlugin(&#123;</div><div class="line">      <span class="attr">url</span>: <span class="string">'http://localhost:8080'</span></div><div class="line">    &#125;)</div><div class="line">  ]</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>启动 <code>webpack-dev-server</code>.启动这个需要node7版本以上<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ webpack-dev-server</div></pre></td></tr></table></figure></p>
+<p>不用手写<code>index.html</code> 也不用手动打开浏览器 Webpack 可以为你做这些事.</p>
+<h2 id="Demo09-设置环境变量-源码"><a href="#Demo09-设置环境变量-源码" class="headerlink" title="Demo09: 设置环境变量(源码)"></a>Demo09: 设置环境变量(<a href="https://github.com/holidaying/webpack-demos/tree/master/demo09" target="_blank" rel="external">源码</a>)</h2><p>你可以利用环境变量来控制特定代码的输出</p>
+<p>main.js</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">document</span>.write(<span class="string">'&lt;h1&gt;Hello World&lt;/h1&gt;'</span>);</div><div class="line"></div><div class="line"><span class="keyword">if</span> (__DEV__) &#123;</div><div class="line">  <span class="built_in">document</span>.write(<span class="keyword">new</span> <span class="built_in">Date</span>());</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>index.html</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"bundle.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>webpack.config.js</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> webpack = <span class="built_in">require</span>(<span class="string">'webpack'</span>);</div><div class="line"></div><div class="line"><span class="keyword">var</span> devFlagPlugin = <span class="keyword">new</span> webpack.DefinePlugin(&#123;</div><div class="line">  <span class="attr">__DEV__</span>: <span class="built_in">JSON</span>.stringify(<span class="built_in">JSON</span>.parse(process.env.DEBUG || <span class="string">'false'</span>))</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">  <span class="attr">entry</span>: <span class="string">'./main.js'</span>,</div><div class="line">  <span class="attr">output</span>: &#123;</div><div class="line">    <span class="attr">filename</span>: <span class="string">'bundle.js'</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">plugins</span>: [devFlagPlugin]</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"># Linux &amp; Mac</div><div class="line">$ env DEBUG=true webpack-dev-server</div><div class="line"></div><div class="line"># Windows</div><div class="line">$ set DEBUG=true</div><div class="line">$ webpack-dev-server</div></pre></td></tr></table></figure>
+<h2 id="Demo10-Code-splitting-源码"><a href="#Demo10-Code-splitting-源码" class="headerlink" title="Demo10: Code splitting (源码)"></a>Demo10: Code splitting (<a href="https://github.com/holidaying/webpack-demos/tree/master/demo10" target="_blank" rel="external">源码</a>)</h2><p>对于大型项目，把所有代码编译到一个文件并不是有效的, Webpack 允许你把代码分成好多块. 特别是某种情况下，只需要个别代码这些块可以按需加载。<br>在commonjs中有一个Modules/Async/A规范，里面定义了require.ensure语法。webpack实现了它，作用是可以在打包的时候进行代码分片，并异步加载分片后的代码。用法如下：<br>require.ensure([], function(require){<br>    var list = require(‘./list’);<br>    list.show();<br>});<br>此时list.js会被打包成一个单独的chunk文件，大概长这样：<br>1.fb874860b35831bc96a8.js<br>可读性比较差。我在上一篇结尾也提到了，给它命名的方式，那就是给require.ensure传递第三个参数，如：</p>
+<p>require.ensure([], function(require){<br>    var list = require(‘./list’);<br>    list.show();<br>}, ‘list’);<br>这样就能得到你想要的文件名称：<br>首先，你需要用 <code>require.ensure</code> to 来定义一个分割的点. (<a href="http://webpack.github.io/docs/code-splitting.html" target="_blank" rel="external">官方文档</a>)</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// main.js</span></div><div class="line"><span class="built_in">require</span>.ensure([<span class="string">'./a'</span>], <span class="function"><span class="keyword">function</span>(<span class="params">require</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> content = <span class="built_in">require</span>(<span class="string">'./a'</span>);</div><div class="line">  <span class="built_in">document</span>.open();</div><div class="line">  <span class="built_in">document</span>.write(<span class="string">'&lt;h1&gt;'</span> + content + <span class="string">'&lt;/h1&gt;'</span>);</div><div class="line">  <span class="built_in">document</span>.close();</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p><code>require.ensure</code> 告诉 Webpack  <code>./a.js</code> 应该从 <code>bundle.js</code> 中分离成一个单独的块</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// a.js</span></div><div class="line"><span class="built_in">module</span>.exports = <span class="string">'Hello World'</span>;</div></pre></td></tr></table></figure>
+<p>Now Webpack takes care of the dependencies, output files and runtime stuff. You don’t have to put any redundancy into your <code>index.html</code> and <code>webpack.config.js</code>.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"bundle.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>webpack.config.js</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">  <span class="attr">entry</span>: <span class="string">'./main.js'</span>,</div><div class="line">  <span class="attr">output</span>: &#123;</div><div class="line">    <span class="attr">filename</span>: <span class="string">'bundle.js'</span></div><div class="line">  &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>地洞服务.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ webpack-dev-server</div></pre></td></tr></table></figure>
+<p>在界面上, 你感觉不到任何不一样的地方. 但是, Webpack 已经把 <code>main.js</code> 和 <code>a.js</code> 编译成(<code>bundle.js</code> 和 <code>1.bundle.js</code>)的块。</p>
+<h2 id="Demo11-通过bundle-loader进行代码分裂-源码"><a href="#Demo11-通过bundle-loader进行代码分裂-源码" class="headerlink" title="Demo11: 通过bundle-loader进行代码分裂 (源码)"></a>Demo11: 通过bundle-loader进行代码分裂 (<a href="https://github.com/holidaying/webpack-demos/tree/master/demo11" target="_blank" rel="external">源码</a>)</h2><p>dem10是一种，另一种是利用<a href="https://www.npmjs.com/package/bundle-loader" target="_blank" rel="external">bundle-loader</a>.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// main.js</span></div><div class="line"></div><div class="line"><span class="comment">// Now a.js is requested, it will be bundled into another file</span></div><div class="line"><span class="keyword">var</span> load = <span class="built_in">require</span>(<span class="string">'bundle-loader!./a.js'</span>);</div><div class="line"></div><div class="line"><span class="comment">// To wait until a.js is available (and get the exports)</span></div><div class="line"><span class="comment">//  you need to async wait for it.</span></div><div class="line">load(<span class="function"><span class="keyword">function</span>(<span class="params">file</span>) </span>&#123;</div><div class="line">  <span class="built_in">document</span>.open();</div><div class="line">  <span class="built_in">document</span>.write(<span class="string">'&lt;h1&gt;'</span> + file + <span class="string">'&lt;/h1&gt;'</span>);</div><div class="line">  <span class="built_in">document</span>.close();</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p><code>require(&#39;bundle-loader!./a.js&#39;)</code> tells Webpack to load <code>a.js</code> from another chunk.</p>
+<p>Now Webpack will build <code>main.js</code> into <code>bundle.js</code>, and <code>a.js</code> into <code>1.bundle.js</code>.</p>
+<h2 id="Demo12-Common-chunk-源码"><a href="#Demo12-Common-chunk-源码" class="headerlink" title="Demo12: Common chunk (源码)"></a>Demo12: Common chunk (<a href="https://github.com/holidaying/webpack-demos/tree/master/demo12" target="_blank" rel="external">源码</a>)</h2><p>利用webpack.optimize.CommonsChunkPlugin，你可以共通的组件，代码块分离出来</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// main1.jsx</span></div><div class="line"><span class="keyword">var</span> React = <span class="built_in">require</span>(<span class="string">'react'</span>);</div><div class="line"><span class="keyword">var</span> ReactDOM = <span class="built_in">require</span>(<span class="string">'react-dom'</span>);</div><div class="line"></div><div class="line">ReactDOM.render(</div><div class="line">  <span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello World<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span>,</div><div class="line">  <span class="built_in">document</span>.getElementById(<span class="string">'a'</span>)</div><div class="line">);</div><div class="line"></div><div class="line"><span class="comment">// main2.jsx</span></div><div class="line"><span class="keyword">var</span> React = <span class="built_in">require</span>(<span class="string">'react'</span>);</div><div class="line"><span class="keyword">var</span> ReactDOM = <span class="built_in">require</span>(<span class="string">'react-dom'</span>);</div><div class="line"></div><div class="line">ReactDOM.render(</div><div class="line">  <span class="xml"><span class="tag">&lt;<span class="name">h2</span>&gt;</span>Hello Webpack<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span>,</div><div class="line">  <span class="built_in">document</span>.getElementById(<span class="string">'b'</span>)</div><div class="line">);</div></pre></td></tr></table></figure>
+<p>index.html</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"a"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"b"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"init.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"bundle1.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"bundle2.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>webpack.config.js</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> CommonsChunkPlugin = <span class="built_in">require</span>(<span class="string">"webpack/lib/optimize/CommonsChunkPlugin"</span>);</div><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">  <span class="attr">entry</span>: &#123;</div><div class="line">    <span class="attr">bundle1</span>: <span class="string">'./main1.jsx'</span>,</div><div class="line">    <span class="attr">bundle2</span>: <span class="string">'./main2.jsx'</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">output</span>: &#123;</div><div class="line">    <span class="attr">filename</span>: <span class="string">'[name].js'</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">module</span>: &#123;</div><div class="line">    <span class="attr">loaders</span>:[</div><div class="line">      &#123;</div><div class="line">        <span class="attr">test</span>: <span class="regexp">/\.js[x]?$/</span>,</div><div class="line">        <span class="attr">exclude</span>: <span class="regexp">/node_modules/</span>,</div><div class="line">        <span class="attr">loader</span>: <span class="string">'babel-loader'</span>,</div><div class="line">        <span class="attr">query</span>: &#123;</div><div class="line">          <span class="attr">presets</span>: [<span class="string">'es2015'</span>, <span class="string">'react'</span>]</div><div class="line">        &#125;</div><div class="line">      &#125;,</div><div class="line">    ]</div><div class="line">  &#125;,</div><div class="line">  <span class="attr">plugins</span>: [</div><div class="line">    <span class="keyword">new</span> CommonsChunkPlugin(<span class="string">'init.js'</span>)</div><div class="line">  ]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="Demo13-Vendor-chunk-源码"><a href="#Demo13-Vendor-chunk-源码" class="headerlink" title="Demo13: Vendor chunk (源码)"></a>Demo13: Vendor chunk (<a href="https://github.com/holidaying/webpack-demos/tree/master/demo13" target="_blank" rel="external">源码</a>)</h2><p>利用ebpack.optimize.CommonsChunkPlugin，你可以把第三方库抽离出来</p>
+<p>main.js</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> $ = <span class="built_in">require</span>(<span class="string">'jquery'</span>);</div><div class="line">$(<span class="string">'h1'</span>).text(<span class="string">'Hello World'</span>);</div></pre></td></tr></table></figure>
+<p>index.html</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span><span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"vendor.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"bundle.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>webpack.config.js</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> webpack = <span class="built_in">require</span>(<span class="string">'webpack'</span>);</div><div class="line"></div><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">  <span class="attr">entry</span>: &#123;</div><div class="line">    <span class="attr">app</span>: <span class="string">'./main.js'</span>,</div><div class="line">    <span class="attr">vendor</span>: [<span class="string">'jquery'</span>],</div><div class="line">  &#125;,</div><div class="line">  <span class="attr">output</span>: &#123;</div><div class="line">    <span class="attr">filename</span>: <span class="string">'bundle.js'</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">plugins</span>: [</div><div class="line">    <span class="keyword">new</span> webpack.optimize.CommonsChunkPlugin(<span class="comment">/* chunkName= */</span><span class="string">'vendor'</span>, <span class="comment">/* filename= */</span><span class="string">'vendor.js'</span>)</div><div class="line">  ]</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>If you want a module available as variable in every module, such as making $ and jQuery available in every module without writing <code>require(&quot;jquery&quot;)</code>. You should use <code>ProvidePlugin</code> (<a href="http://webpack.github.io/docs/shimming-modules.html" target="_blank" rel="external">官方文档</a>).</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// main.js</span></div><div class="line">$(<span class="string">'h1'</span>).text(<span class="string">'Hello World'</span>);</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">// webpack.config.js</span></div><div class="line"><span class="keyword">var</span> webpack = <span class="built_in">require</span>(<span class="string">'webpack'</span>);</div><div class="line"></div><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">  <span class="attr">entry</span>: &#123;</div><div class="line">    <span class="attr">app</span>: <span class="string">'./main.js'</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">output</span>: &#123;</div><div class="line">    <span class="attr">filename</span>: <span class="string">'bundle.js'</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">plugins</span>: [</div><div class="line">    <span class="keyword">new</span> webpack.ProvidePlugin(&#123;</div><div class="line">      <span class="attr">$</span>: <span class="string">"jquery"</span>,</div><div class="line">      <span class="attr">jQuery</span>: <span class="string">"jquery"</span>,</div><div class="line">      <span class="string">"window.jQuery"</span>: <span class="string">"jquery"</span></div><div class="line">    &#125;)</div><div class="line">  ]</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>插件会执行两次这个方法，第一次将公共的第三方代码抽离移到vendor的块中，这个过程之前也讲过会将运行时runtime也转移到vendor块中，第二次执行则是将运行时runtime抽离出来转移到manifest块中。这步操作解决了缓存问题。<br>这样处理，最后会生成3个打包文件chunk，app.js是业务代码，vendor则是公共的第三方代码，manifest.js则是运行时。</p>
+<h2 id="Demo14-Exposing-global-variables-源码"><a href="#Demo14-Exposing-global-variables-源码" class="headerlink" title="Demo14: Exposing global variables (源码)"></a>Demo14: Exposing global variables (<a href="https://github.com/holidaying/webpack-demos/tree/master/demo14" target="_blank" rel="external">源码</a>)</h2><p>webpack可以不处理应用的某些依赖库，使用externals配置后，依旧可以在代码中通过CMD、AMD或者window/global全局的方式访问。如果你想引入一些全局变量, 但是不想被加载处理, 你可以在 <code>webpack.config.js</code> 使用 <code>externals</code> 模块 (<a href="http://webpack.github.io/docs/library-and-externals.html" target="_blank" rel="external">官方文档</a>).<br>有时我们希望我们通过script引入的库，如用CDN的方式引入的jquery，我们在使用时，依旧用require的方式来使用，但是却不希望webpack将它又编译进文件中。</p>
+<p><script src="http://code.jquery.com/jquery-1.12.0.min.js"></script><br>例子, <code>data.js</code>.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> data = <span class="string">'Hello World'</span>;</div></pre></td></tr></table></figure>
+<p>We can expose <code>data</code> as a global variable.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// webpack.config.js</span></div><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">  <span class="attr">entry</span>: <span class="string">'./main.jsx'</span>,</div><div class="line">  <span class="attr">output</span>: &#123;</div><div class="line">    <span class="attr">filename</span>: <span class="string">'bundle.js'</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">module</span>: &#123;</div><div class="line">    <span class="attr">loaders</span>:[</div><div class="line">      &#123;</div><div class="line">        <span class="attr">test</span>: <span class="regexp">/\.js[x]?$/</span>,</div><div class="line">        <span class="attr">exclude</span>: <span class="regexp">/node_modules/</span>,</div><div class="line">        <span class="attr">loader</span>: <span class="string">'babel-loader'</span>,</div><div class="line">        <span class="attr">query</span>: &#123;</div><div class="line">          <span class="attr">presets</span>: [<span class="string">'es2015'</span>, <span class="string">'react'</span>]</div><div class="line">        &#125;</div><div class="line">      &#125;,</div><div class="line">    ]</div><div class="line">  &#125;,</div><div class="line">  <span class="attr">externals</span>: &#123;</div><div class="line">    <span class="comment">// require('data') is external and available</span></div><div class="line">    <span class="comment">//  on the global var data</span></div><div class="line">    <span class="string">'data'</span>: <span class="string">'data'</span></div><div class="line">  &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>现在, 你可以require <code>data</code> 作为模块化引入进来使用. 但是实际上是一个全局变量</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// main.jsx</span></div><div class="line"><span class="keyword">var</span> data = <span class="built_in">require</span>(<span class="string">'data'</span>);</div><div class="line"><span class="keyword">var</span> React = <span class="built_in">require</span>(<span class="string">'react'</span>);</div><div class="line"><span class="keyword">var</span> ReactDOM = <span class="built_in">require</span>(<span class="string">'react-dom'</span>);</div><div class="line"></div><div class="line">ReactDOM.render(</div><div class="line">  <span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>&#123;data&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span>,</div><div class="line">  <span class="built_in">document</span>.body</div><div class="line">);</div></pre></td></tr></table></figure>
+<h2 id="Demo15-热模块替换-热更新-源码"><a href="#Demo15-热模块替换-热更新-源码" class="headerlink" title="Demo15: 热模块替换/热更新 (源码)"></a>Demo15: 热模块替换/热更新 (<a href="https://github.com/holidaying/webpack-demos/tree/master/demo15" target="_blank" rel="external">源码</a>)</h2><p><a href="https://github.com/webpack/docs/wiki/hot-module-replacement-with-webpack" target="_blank" rel="external">Hot Module Replacement</a> (HMR) exchanges, adds, or removes modules while an application is running <strong>without a page reload</strong>.</p>
+<p>通过webpack-dev-server.你可以使用<a href="http://webpack.github.io/docs/webpack-dev-server.html#hot-module-replacement" target="_blank" rel="external">2中方式</a> 来进行热模块替换</p>
+<p>(1) Specify <code>--hot</code> and <code>--inline</code> on the command line</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ webpack-dev-server --hot --inline</div></pre></td></tr></table></figure>
+<p>参数的意思:</p>
+<ul>
+<li><code>--hot</code>: adds the HotModuleReplacementPlugin and switch the server to hot mode.</li>
+<li><code>--inline</code>: embed the webpack-dev-server runtime into the bundle.</li>
+<li><code>--hot --inline</code>: also adds the webpack/hot/dev-server entry.</li>
+</ul>
+<p>(2) 修改 <code>webpack.config.js</code>.</p>
+<ul>
+<li>添加 <code>new webpack.HotModuleReplacementPlugin()</code> to the <code>plugins</code> 模块</li>
+<li>添加 <code>webpack/hot/dev-server</code> 和 <code>webpack-dev-server/client?http://localhost:8080</code> to the <code>entry</code> 模块</li>
+</ul>
+<p><code>webpack.config.js</code> 如下所示.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> webpack = <span class="built_in">require</span>(<span class="string">'webpack'</span>);</div><div class="line"><span class="keyword">var</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>);</div><div class="line"></div><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">  <span class="attr">entry</span>: [</div><div class="line">    <span class="string">'webpack/hot/dev-server'</span>,</div><div class="line">    <span class="string">'webpack-dev-server/client?http://localhost:8080'</span>,</div><div class="line">    <span class="string">'./index.js'</span></div><div class="line">  ],</div><div class="line">  <span class="attr">output</span>: &#123;</div><div class="line">    <span class="attr">filename</span>: <span class="string">'bundle.js'</span>,</div><div class="line">    <span class="attr">publicPath</span>: <span class="string">'/static/'</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">plugins</span>: [</div><div class="line">    <span class="keyword">new</span> webpack.HotModuleReplacementPlugin()</div><div class="line">  ],</div><div class="line">  <span class="attr">module</span>: &#123;</div><div class="line">    <span class="attr">loaders</span>: [&#123;</div><div class="line">      <span class="attr">test</span>: <span class="regexp">/\.jsx?$/</span>,</div><div class="line">      <span class="attr">exclude</span>: <span class="regexp">/node_modules/</span>,</div><div class="line">      <span class="attr">loader</span>: <span class="string">'babel-loader'</span>,</div><div class="line">      <span class="attr">query</span>: &#123;</div><div class="line">        <span class="attr">presets</span>: [<span class="string">'es2015'</span>, <span class="string">'react'</span>]</div><div class="line">      &#125;,</div><div class="line">      <span class="attr">include</span>: path.join(__dirname, <span class="string">'.'</span>)</div><div class="line">    &#125;]</div><div class="line">  &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>启动服务</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ webpack-dev-server</div></pre></td></tr></table></figure>
+<p>访问 <a href="http://localhost:8080" target="_blank" rel="external">http://localhost:8080</a>, 你可以在浏览器上看到 ‘Hello World’ .</p>
+<p>不要关闭服务.打开终端找到 <code>App.js</code>, 同时修改 ‘Hello World’ 为 ‘Hello Webpack’. 保存后，你就可以在浏览器上看到数据更新了</p>
+<p>App.js</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">'react'</span>;</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</div><div class="line">  render() &#123;</div><div class="line">    <span class="keyword">return</span> (</div><div class="line">      <span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello World<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></div><div class="line">    );</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>index.js</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span>;</div><div class="line"><span class="keyword">import</span> ReactDOM <span class="keyword">from</span> <span class="string">'react-dom'</span>;</div><div class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">'./App'</span>;</div><div class="line"></div><div class="line">ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="name">App</span> /&gt;</span>, document.getElementById('root'));</span></div></pre></td></tr></table></figure>
+<p>index.html</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">'root'</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"/static/bundle.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="Demo16-React-router例子-源码"><a href="#Demo16-React-router例子-源码" class="headerlink" title="Demo16: React router例子 (源码)"></a>Demo16: React router例子 (<a href="https://github.com/holidaying/webpack-demos/tree/master/demo16" target="_blank" rel="external">源码</a>)</h2><p>利用webpack做的例子 <a href="https://github.com/rackt/react-router/blob/0.13.x/docs/guides/overview.md" target="_blank" rel="external">React-router</a>‘s 官方例子.</p>
+<p>Let’s imagine a little app with a dashboard, inbox, and calendar.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">+---------------------------------------------------------+</div><div class="line">| +---------+ +-------+ +--------+                        |</div><div class="line">| |Dashboard| | Inbox | |Calendar|      Logged in as Jane |</div><div class="line">| +---------+ +-------+ +--------+                        |</div><div class="line">+---------------------------------------------------------+</div><div class="line">|                                                         |</div><div class="line">|                        Dashboard                        |</div><div class="line">|                                                         |</div><div class="line">|                                                         |</div><div class="line">|   +---------------------+    +----------------------+   |</div><div class="line">|   |                     |    |                      |   |</div><div class="line">|   | +              +    |    +---------&gt;            |   |</div><div class="line">|   | |              |    |    |                      |   |</div><div class="line">|   | |   +          |    |    +-------------&gt;        |   |</div><div class="line">|   | |   |    +     |    |    |                      |   |</div><div class="line">|   | |   |    |     |    |    |                      |   |</div><div class="line">|   +-+---+----+-----+----+    +----------------------+   |</div><div class="line">|                                                         |</div><div class="line">+---------------------------------------------------------+</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ webpack-dev-server --history-api-fallback</div></pre></td></tr></table></figure>
+<h2 id="参照文档"><a href="#参照文档" class="headerlink" title="参照文档"></a>参照文档</h2><ul>
+<li><a href="http://webpack.github.io/docs/" target="_blank" rel="external">Webpack docs</a></li>
+<li><a href="https://github.com/petehunt/webpack-howto" target="_blank" rel="external">webpack-howto</a>, by Pete Hunt</li>
+<li><a href="https://web-design-weekly.com/2014/09/24/diving-webpack/" target="_blank" rel="external">Diving into Webpack</a>, by Web Design Weekly</li>
+<li><a href="http://www.christianalfoni.com/articles/2014_12_13_Webpack-and-react-is-awesome" target="_blank" rel="external">Webpack and React is awesome</a>, by Christian Alfoni</li>
+<li><a href="https://medium.com/@housecor/browserify-vs-webpack-b3d7ca08a0a9" target="_blank" rel="external">Browserify vs Webpack</a>, by Cory House</li>
+<li><a href="https://christianalfoni.github.io/react-webpack-cookbook/index.html" target="_blank" rel="external">React Webpack cookbook</a>, by Christian Alfoni</li>
+</ul>
+<h2 id="License"><a href="#License" class="headerlink" title="License"></a>License</h2><p>MIT</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>我们一起编程吧<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="http://ol1rnobmr.bkt.clouddn.com/apliy.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="http://ol1rnobmr.bkt.clouddn.com/wx.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">webpack</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://holidaying.github.io/2017/04/12/webpack/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2017/03/23/git/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">git</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+  
+    <div class="duoshuo"></div>
+  
+
+
+
+
+
+  
+  <!-- 网易云跟帖评论插件通用代码 -->
+<div class="netease">
+	<div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+	<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+	<script>
+	var cloudTieConfig = {
+	  url: document.location.href, 
+	  sourceId: "",
+	  productKey: "b6b06ecca9fd4dd584fef2b177bc838c",
+	  target: "cloud-tie-wrapper"
+	};
+	var yunManualLoad = true;
+	Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);
+	</script>
+</div>
+<!-- 网易云跟帖代码结束 -->
+  
+
+
+          </div>
+        </div>
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2017 西安小哥
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		mathjax: false,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true,
+		showTags: false
+	}
+</script>
+
+<script>!function(t){function n(r){if(e[r])return e[r].exports;var o=e[r]={exports:{},id:r,loaded:!1};return t[r].call(o.exports,o,o.exports,n),o.loaded=!0,o.exports}var e={};return n.m=t,n.c=e,n.p="./",n(0)}([function(t,n,e){"use strict";function r(t){return t&&t.__esModule?t:{default:t}}function o(t,n){var e=/\/|index.html/g;return t.replace(e,"")===n.replace(e,"")}function i(){for(var t=document.querySelectorAll(".js-header-menu li a"),n=window.location.pathname,e=0,r=t.length;e<r;e++){var i=t[e];o(n,i.getAttribute("href"))&&(0,d.default)(i,"active")}}function u(t){for(var n=t.offsetLeft,e=t.offsetParent;null!==e;)n+=e.offsetLeft,e=e.offsetParent;return n}function f(t){for(var n=t.offsetTop,e=t.offsetParent;null!==e;)n+=e.offsetTop,e=e.offsetParent;return n}function c(t,n,e,r,o){var i=u(t),c=f(t)-n;if(c-e<=o){var a=t.$newDom;a||(a=t.cloneNode(!0),(0,h.default)(t,a),t.$newDom=a,a.style.position="fixed",a.style.top=(e||c)+"px",a.style.left=i+"px",a.style.zIndex=r||2,a.style.width="100%",a.style.color="#fff"),a.style.visibility="visible",t.style.visibility="hidden"}else{t.style.visibility="visible";var s=t.$newDom;s&&(s.style.visibility="hidden")}}function a(){var t=document.querySelector(".js-overlay"),n=document.querySelector(".js-header-menu");c(t,document.body.scrollTop,-63,2,0),c(n,document.body.scrollTop,1,3,0)}function s(){document.querySelector("#container").addEventListener("scroll",function(t){a()}),window.addEventListener("scroll",function(t){a()}),a()}function l(){x.default.versions.mobile&&window.screen.width<800&&(i(),s())}var p=e(71),d=r(p),v=e(72),y=(r(v),e(84)),h=r(y),b=e(69),x=r(b),g=e(75),m=r(g),w=e(70);l(),(0,w.addLoadEvent)(function(){m.default.init()}),t.exports={}},function(t,n){var e=t.exports="undefined"!=typeof window&&window.Math==Math?window:"undefined"!=typeof self&&self.Math==Math?self:Function("return this")();"number"==typeof __g&&(__g=e)},function(t,n){var e={}.hasOwnProperty;t.exports=function(t,n){return e.call(t,n)}},function(t,n,e){var r=e(49),o=e(15);t.exports=function(t){return r(o(t))}},function(t,n,e){t.exports=!e(8)(function(){return 7!=Object.defineProperty({},"a",{get:function(){return 7}}).a})},function(t,n,e){var r=e(6),o=e(12);t.exports=e(4)?function(t,n,e){return r.f(t,n,o(1,e))}:function(t,n,e){return t[n]=e,t}},function(t,n,e){var r=e(10),o=e(30),i=e(24),u=Object.defineProperty;n.f=e(4)?Object.defineProperty:function(t,n,e){if(r(t),n=i(n,!0),r(e),o)try{return u(t,n,e)}catch(t){}if("get"in e||"set"in e)throw TypeError("Accessors not supported!");return"value"in e&&(t[n]=e.value),t}},function(t,n,e){var r=e(22)("wks"),o=e(13),i=e(1).Symbol,u="function"==typeof i,f=t.exports=function(t){return r[t]||(r[t]=u&&i[t]||(u?i:o)("Symbol."+t))};f.store=r},function(t,n){t.exports=function(t){try{return!!t()}catch(t){return!0}}},function(t,n,e){var r=e(35),o=e(16);t.exports=Object.keys||function(t){return r(t,o)}},function(t,n,e){var r=e(11);t.exports=function(t){if(!r(t))throw TypeError(t+" is not an object!");return t}},function(t,n){t.exports=function(t){return"object"==typeof t?null!==t:"function"==typeof t}},function(t,n){t.exports=function(t,n){return{enumerable:!(1&t),configurable:!(2&t),writable:!(4&t),value:n}}},function(t,n){var e=0,r=Math.random();t.exports=function(t){return"Symbol(".concat(void 0===t?"":t,")_",(++e+r).toString(36))}},function(t,n){var e=t.exports={version:"2.4.0"};"number"==typeof __e&&(__e=e)},function(t,n){t.exports=function(t){if(void 0==t)throw TypeError("Can't call method on  "+t);return t}},function(t,n){t.exports="constructor,hasOwnProperty,isPrototypeOf,propertyIsEnumerable,toLocaleString,toString,valueOf".split(",")},function(t,n){t.exports={}},function(t,n){t.exports=!0},function(t,n){n.f={}.propertyIsEnumerable},function(t,n,e){var r=e(6).f,o=e(2),i=e(7)("toStringTag");t.exports=function(t,n,e){t&&!o(t=e?t:t.prototype,i)&&r(t,i,{configurable:!0,value:n})}},function(t,n,e){var r=e(22)("keys"),o=e(13);t.exports=function(t){return r[t]||(r[t]=o(t))}},function(t,n,e){var r=e(1),o="__core-js_shared__",i=r[o]||(r[o]={});t.exports=function(t){return i[t]||(i[t]={})}},function(t,n){var e=Math.ceil,r=Math.floor;t.exports=function(t){return isNaN(t=+t)?0:(t>0?r:e)(t)}},function(t,n,e){var r=e(11);t.exports=function(t,n){if(!r(t))return t;var e,o;if(n&&"function"==typeof(e=t.toString)&&!r(o=e.call(t)))return o;if("function"==typeof(e=t.valueOf)&&!r(o=e.call(t)))return o;if(!n&&"function"==typeof(e=t.toString)&&!r(o=e.call(t)))return o;throw TypeError("Can't convert object to primitive value")}},function(t,n,e){var r=e(1),o=e(14),i=e(18),u=e(26),f=e(6).f;t.exports=function(t){var n=o.Symbol||(o.Symbol=i?{}:r.Symbol||{});"_"==t.charAt(0)||t in n||f(n,t,{value:u.f(t)})}},function(t,n,e){n.f=e(7)},function(t,n,e){var r=e(1),o=e(14),i=e(46),u=e(5),f="prototype",c=function(t,n,e){var a,s,l,p=t&c.F,d=t&c.G,v=t&c.S,y=t&c.P,h=t&c.B,b=t&c.W,x=d?o:o[n]||(o[n]={}),g=x[f],m=d?r:v?r[n]:(r[n]||{})[f];d&&(e=n);for(a in e)s=!p&&m&&void 0!==m[a],s&&a in x||(l=s?m[a]:e[a],x[a]=d&&"function"!=typeof m[a]?e[a]:h&&s?i(l,r):b&&m[a]==l?function(t){var n=function(n,e,r){if(this instanceof t){switch(arguments.length){case 0:return new t;case 1:return new t(n);case 2:return new t(n,e)}return new t(n,e,r)}return t.apply(this,arguments)};return n[f]=t[f],n}(l):y&&"function"==typeof l?i(Function.call,l):l,y&&((x.virtual||(x.virtual={}))[a]=l,t&c.R&&g&&!g[a]&&u(g,a,l)))};c.F=1,c.G=2,c.S=4,c.P=8,c.B=16,c.W=32,c.U=64,c.R=128,t.exports=c},function(t,n){var e={}.toString;t.exports=function(t){return e.call(t).slice(8,-1)}},function(t,n,e){var r=e(11),o=e(1).document,i=r(o)&&r(o.createElement);t.exports=function(t){return i?o.createElement(t):{}}},function(t,n,e){t.exports=!e(4)&&!e(8)(function(){return 7!=Object.defineProperty(e(29)("div"),"a",{get:function(){return 7}}).a})},function(t,n,e){"use strict";var r=e(18),o=e(27),i=e(36),u=e(5),f=e(2),c=e(17),a=e(51),s=e(20),l=e(58),p=e(7)("iterator"),d=!([].keys&&"next"in[].keys()),v="@@iterator",y="keys",h="values",b=function(){return this};t.exports=function(t,n,e,x,g,m,w){a(e,n,x);var O,S,_,j=function(t){if(!d&&t in A)return A[t];switch(t){case y:return function(){return new e(this,t)};case h:return function(){return new e(this,t)}}return function(){return new e(this,t)}},P=n+" Iterator",E=g==h,M=!1,A=t.prototype,T=A[p]||A[v]||g&&A[g],L=T||j(g),N=g?E?j("entries"):L:void 0,C="Array"==n?A.entries||T:T;if(C&&(_=l(C.call(new t)),_!==Object.prototype&&(s(_,P,!0),r||f(_,p)||u(_,p,b))),E&&T&&T.name!==h&&(M=!0,L=function(){return T.call(this)}),r&&!w||!d&&!M&&A[p]||u(A,p,L),c[n]=L,c[P]=b,g)if(O={values:E?L:j(h),keys:m?L:j(y),entries:N},w)for(S in O)S in A||i(A,S,O[S]);else o(o.P+o.F*(d||M),n,O);return O}},function(t,n,e){var r=e(10),o=e(55),i=e(16),u=e(21)("IE_PROTO"),f=function(){},c="prototype",a=function(){var t,n=e(29)("iframe"),r=i.length,o="<",u=">";for(n.style.display="none",e(48).appendChild(n),n.src="javascript:",t=n.contentWindow.document,t.open(),t.write(o+"script"+u+"document.F=Object"+o+"/script"+u),t.close(),a=t.F;r--;)delete a[c][i[r]];return a()};t.exports=Object.create||function(t,n){var e;return null!==t?(f[c]=r(t),e=new f,f[c]=null,e[u]=t):e=a(),void 0===n?e:o(e,n)}},function(t,n,e){var r=e(35),o=e(16).concat("length","prototype");n.f=Object.getOwnPropertyNames||function(t){return r(t,o)}},function(t,n){n.f=Object.getOwnPropertySymbols},function(t,n,e){var r=e(2),o=e(3),i=e(45)(!1),u=e(21)("IE_PROTO");t.exports=function(t,n){var e,f=o(t),c=0,a=[];for(e in f)e!=u&&r(f,e)&&a.push(e);for(;n.length>c;)r(f,e=n[c++])&&(~i(a,e)||a.push(e));return a}},function(t,n,e){t.exports=e(5)},function(t,n,e){var r=e(15);t.exports=function(t){return Object(r(t))}},function(t,n,e){t.exports={default:e(41),__esModule:!0}},function(t,n,e){t.exports={default:e(42),__esModule:!0}},function(t,n,e){"use strict";function r(t){return t&&t.__esModule?t:{default:t}}n.__esModule=!0;var o=e(39),i=r(o),u=e(38),f=r(u),c="function"==typeof f.default&&"symbol"==typeof i.default?function(t){return typeof t}:function(t){return t&&"function"==typeof f.default&&t.constructor===f.default&&t!==f.default.prototype?"symbol":typeof t};n.default="function"==typeof f.default&&"symbol"===c(i.default)?function(t){return"undefined"==typeof t?"undefined":c(t)}:function(t){return t&&"function"==typeof f.default&&t.constructor===f.default&&t!==f.default.prototype?"symbol":"undefined"==typeof t?"undefined":c(t)}},function(t,n,e){e(65),e(63),e(66),e(67),t.exports=e(14).Symbol},function(t,n,e){e(64),e(68),t.exports=e(26).f("iterator")},function(t,n){t.exports=function(t){if("function"!=typeof t)throw TypeError(t+" is not a function!");return t}},function(t,n){t.exports=function(){}},function(t,n,e){var r=e(3),o=e(61),i=e(60);t.exports=function(t){return function(n,e,u){var f,c=r(n),a=o(c.length),s=i(u,a);if(t&&e!=e){for(;a>s;)if(f=c[s++],f!=f)return!0}else for(;a>s;s++)if((t||s in c)&&c[s]===e)return t||s||0;return!t&&-1}}},function(t,n,e){var r=e(43);t.exports=function(t,n,e){if(r(t),void 0===n)return t;switch(e){case 1:return function(e){return t.call(n,e)};case 2:return function(e,r){return t.call(n,e,r)};case 3:return function(e,r,o){return t.call(n,e,r,o)}}return function(){return t.apply(n,arguments)}}},function(t,n,e){var r=e(9),o=e(34),i=e(19);t.exports=function(t){var n=r(t),e=o.f;if(e)for(var u,f=e(t),c=i.f,a=0;f.length>a;)c.call(t,u=f[a++])&&n.push(u);return n}},function(t,n,e){t.exports=e(1).document&&document.documentElement},function(t,n,e){var r=e(28);t.exports=Object("z").propertyIsEnumerable(0)?Object:function(t){return"String"==r(t)?t.split(""):Object(t)}},function(t,n,e){var r=e(28);t.exports=Array.isArray||function(t){return"Array"==r(t)}},function(t,n,e){"use strict";var r=e(32),o=e(12),i=e(20),u={};e(5)(u,e(7)("iterator"),function(){return this}),t.exports=function(t,n,e){t.prototype=r(u,{next:o(1,e)}),i(t,n+" Iterator")}},function(t,n){t.exports=function(t,n){return{value:n,done:!!t}}},function(t,n,e){var r=e(9),o=e(3);t.exports=function(t,n){for(var e,i=o(t),u=r(i),f=u.length,c=0;f>c;)if(i[e=u[c++]]===n)return e}},function(t,n,e){var r=e(13)("meta"),o=e(11),i=e(2),u=e(6).f,f=0,c=Object.isExtensible||function(){return!0},a=!e(8)(function(){return c(Object.preventExtensions({}))}),s=function(t){u(t,r,{value:{i:"O"+ ++f,w:{}}})},l=function(t,n){if(!o(t))return"symbol"==typeof t?t:("string"==typeof t?"S":"P")+t;if(!i(t,r)){if(!c(t))return"F";if(!n)return"E";s(t)}return t[r].i},p=function(t,n){if(!i(t,r)){if(!c(t))return!0;if(!n)return!1;s(t)}return t[r].w},d=function(t){return a&&v.NEED&&c(t)&&!i(t,r)&&s(t),t},v=t.exports={KEY:r,NEED:!1,fastKey:l,getWeak:p,onFreeze:d}},function(t,n,e){var r=e(6),o=e(10),i=e(9);t.exports=e(4)?Object.defineProperties:function(t,n){o(t);for(var e,u=i(n),f=u.length,c=0;f>c;)r.f(t,e=u[c++],n[e]);return t}},function(t,n,e){var r=e(19),o=e(12),i=e(3),u=e(24),f=e(2),c=e(30),a=Object.getOwnPropertyDescriptor;n.f=e(4)?a:function(t,n){if(t=i(t),n=u(n,!0),c)try{return a(t,n)}catch(t){}if(f(t,n))return o(!r.f.call(t,n),t[n])}},function(t,n,e){var r=e(3),o=e(33).f,i={}.toString,u="object"==typeof window&&window&&Object.getOwnPropertyNames?Object.getOwnPropertyNames(window):[],f=function(t){try{return o(t)}catch(t){return u.slice()}};t.exports.f=function(t){return u&&"[object Window]"==i.call(t)?f(t):o(r(t))}},function(t,n,e){var r=e(2),o=e(37),i=e(21)("IE_PROTO"),u=Object.prototype;t.exports=Object.getPrototypeOf||function(t){return t=o(t),r(t,i)?t[i]:"function"==typeof t.constructor&&t instanceof t.constructor?t.constructor.prototype:t instanceof Object?u:null}},function(t,n,e){var r=e(23),o=e(15);t.exports=function(t){return function(n,e){var i,u,f=String(o(n)),c=r(e),a=f.length;return c<0||c>=a?t?"":void 0:(i=f.charCodeAt(c),i<55296||i>56319||c+1===a||(u=f.charCodeAt(c+1))<56320||u>57343?t?f.charAt(c):i:t?f.slice(c,c+2):(i-55296<<10)+(u-56320)+65536)}}},function(t,n,e){var r=e(23),o=Math.max,i=Math.min;t.exports=function(t,n){return t=r(t),t<0?o(t+n,0):i(t,n)}},function(t,n,e){var r=e(23),o=Math.min;t.exports=function(t){return t>0?o(r(t),9007199254740991):0}},function(t,n,e){"use strict";var r=e(44),o=e(52),i=e(17),u=e(3);t.exports=e(31)(Array,"Array",function(t,n){this._t=u(t),this._i=0,this._k=n},function(){var t=this._t,n=this._k,e=this._i++;return!t||e>=t.length?(this._t=void 0,o(1)):"keys"==n?o(0,e):"values"==n?o(0,t[e]):o(0,[e,t[e]])},"values"),i.Arguments=i.Array,r("keys"),r("values"),r("entries")},function(t,n){},function(t,n,e){"use strict";var r=e(59)(!0);e(31)(String,"String",function(t){this._t=String(t),this._i=0},function(){var t,n=this._t,e=this._i;return e>=n.length?{value:void 0,done:!0}:(t=r(n,e),this._i+=t.length,{value:t,done:!1})})},function(t,n,e){"use strict";var r=e(1),o=e(2),i=e(4),u=e(27),f=e(36),c=e(54).KEY,a=e(8),s=e(22),l=e(20),p=e(13),d=e(7),v=e(26),y=e(25),h=e(53),b=e(47),x=e(50),g=e(10),m=e(3),w=e(24),O=e(12),S=e(32),_=e(57),j=e(56),P=e(6),E=e(9),M=j.f,A=P.f,T=_.f,L=r.Symbol,N=r.JSON,C=N&&N.stringify,k="prototype",F=d("_hidden"),q=d("toPrimitive"),I={}.propertyIsEnumerable,B=s("symbol-registry"),D=s("symbols"),W=s("op-symbols"),H=Object[k],K="function"==typeof L,R=r.QObject,J=!R||!R[k]||!R[k].findChild,U=i&&a(function(){return 7!=S(A({},"a",{get:function(){return A(this,"a",{value:7}).a}})).a})?function(t,n,e){var r=M(H,n);r&&delete H[n],A(t,n,e),r&&t!==H&&A(H,n,r)}:A,G=function(t){var n=D[t]=S(L[k]);return n._k=t,n},$=K&&"symbol"==typeof L.iterator?function(t){return"symbol"==typeof t}:function(t){return t instanceof L},z=function(t,n,e){return t===H&&z(W,n,e),g(t),n=w(n,!0),g(e),o(D,n)?(e.enumerable?(o(t,F)&&t[F][n]&&(t[F][n]=!1),e=S(e,{enumerable:O(0,!1)})):(o(t,F)||A(t,F,O(1,{})),t[F][n]=!0),U(t,n,e)):A(t,n,e)},Y=function(t,n){g(t);for(var e,r=b(n=m(n)),o=0,i=r.length;i>o;)z(t,e=r[o++],n[e]);return t},Q=function(t,n){return void 0===n?S(t):Y(S(t),n)},X=function(t){var n=I.call(this,t=w(t,!0));return!(this===H&&o(D,t)&&!o(W,t))&&(!(n||!o(this,t)||!o(D,t)||o(this,F)&&this[F][t])||n)},V=function(t,n){if(t=m(t),n=w(n,!0),t!==H||!o(D,n)||o(W,n)){var e=M(t,n);return!e||!o(D,n)||o(t,F)&&t[F][n]||(e.enumerable=!0),e}},Z=function(t){for(var n,e=T(m(t)),r=[],i=0;e.length>i;)o(D,n=e[i++])||n==F||n==c||r.push(n);return r},tt=function(t){for(var n,e=t===H,r=T(e?W:m(t)),i=[],u=0;r.length>u;)!o(D,n=r[u++])||e&&!o(H,n)||i.push(D[n]);return i};K||(L=function(){if(this instanceof L)throw TypeError("Symbol is not a constructor!");var t=p(arguments.length>0?arguments[0]:void 0),n=function(e){this===H&&n.call(W,e),o(this,F)&&o(this[F],t)&&(this[F][t]=!1),U(this,t,O(1,e))};return i&&J&&U(H,t,{configurable:!0,set:n}),G(t)},f(L[k],"toString",function(){return this._k}),j.f=V,P.f=z,e(33).f=_.f=Z,e(19).f=X,e(34).f=tt,i&&!e(18)&&f(H,"propertyIsEnumerable",X,!0),v.f=function(t){return G(d(t))}),u(u.G+u.W+u.F*!K,{Symbol:L});for(var nt="hasInstance,isConcatSpreadable,iterator,match,replace,search,species,split,toPrimitive,toStringTag,unscopables".split(","),et=0;nt.length>et;)d(nt[et++]);for(var nt=E(d.store),et=0;nt.length>et;)y(nt[et++]);u(u.S+u.F*!K,"Symbol",{for:function(t){return o(B,t+="")?B[t]:B[t]=L(t)},keyFor:function(t){if($(t))return h(B,t);throw TypeError(t+" is not a symbol!")},useSetter:function(){J=!0},useSimple:function(){J=!1}}),u(u.S+u.F*!K,"Object",{create:Q,defineProperty:z,defineProperties:Y,getOwnPropertyDescriptor:V,getOwnPropertyNames:Z,getOwnPropertySymbols:tt}),N&&u(u.S+u.F*(!K||a(function(){var t=L();return"[null]"!=C([t])||"{}"!=C({a:t})||"{}"!=C(Object(t))})),"JSON",{stringify:function(t){if(void 0!==t&&!$(t)){for(var n,e,r=[t],o=1;arguments.length>o;)r.push(arguments[o++]);return n=r[1],"function"==typeof n&&(e=n),!e&&x(n)||(n=function(t,n){if(e&&(n=e.call(this,t,n)),!$(n))return n}),r[1]=n,C.apply(N,r)}}}),L[k][q]||e(5)(L[k],q,L[k].valueOf),l(L,"Symbol"),l(Math,"Math",!0),l(r.JSON,"JSON",!0)},function(t,n,e){e(25)("asyncIterator")},function(t,n,e){e(25)("observable")},function(t,n,e){e(62);for(var r=e(1),o=e(5),i=e(17),u=e(7)("toStringTag"),f=["NodeList","DOMTokenList","MediaList","StyleSheetList","CSSRuleList"],c=0;c<5;c++){var a=f[c],s=r[a],l=s&&s.prototype;l&&!l[u]&&o(l,u,a),i[a]=i.Array}},function(t,n){"use strict";var e={versions:function(){var t=window.navigator.userAgent;return{trident:t.indexOf("Trident")>-1,presto:t.indexOf("Presto")>-1,webKit:t.indexOf("AppleWebKit")>-1,gecko:t.indexOf("Gecko")>-1&&t.indexOf("KHTML")==-1,mobile:!!t.match(/AppleWebKit.*Mobile.*/),ios:!!t.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),android:t.indexOf("Android")>-1||t.indexOf("Linux")>-1,iPhone:t.indexOf("iPhone")>-1||t.indexOf("Mac")>-1,iPad:t.indexOf("iPad")>-1,webApp:t.indexOf("Safari")==-1,weixin:t.indexOf("MicroMessenger")==-1}}()};t.exports=e},function(t,n,e){"use strict";function r(t){return t&&t.__esModule?t:{default:t}}var o=e(40),i=r(o),u=function(){function t(t,n,e){return n||e?String.fromCharCode(n||e):o[t]||t}function n(t){return l[t]}var e=/&quot;|&lt;|&gt;|&amp;|&nbsp;|&apos;|&#(\d+);|&#(\d+)/g,r=/['<> "&]/g,o={"&quot;":'"',"&lt;":"<","&gt;":">","&amp;":"&","&nbsp;":" "},f=/\u00a0/g,c=/<br\s*\/?>/gi,a=/\r?\n/g,s=/\s/g,l={};for(var p in o)l[o[p]]=p;return o["&apos;"]="'",l["'"]="&#39;",{encode:function(t){return t?(""+t).replace(r,n).replace(a,"<br/>").replace(s,"&nbsp;"):""},decode:function(n){return n?(""+n).replace(c,"\n").replace(e,t).replace(f," "):""},encodeBase16:function(t){if(!t)return t;t+="";for(var n=[],e=0,r=t.length;r>e;e++)n.push(t.charCodeAt(e).toString(16).toUpperCase());return n.join("")},encodeBase16forJSON:function(t){if(!t)return t;t=t.replace(/[\u4E00-\u9FBF]/gi,function(t){return escape(t).replace("%u","\\u")});for(var n=[],e=0,r=t.length;r>e;e++)n.push(t.charCodeAt(e).toString(16).toUpperCase());return n.join("")},decodeBase16:function(t){if(!t)return t;t+="";for(var n=[],e=0,r=t.length;r>e;e+=2)n.push(String.fromCharCode("0x"+t.slice(e,e+2)));return n.join("")},encodeObject:function(t){if(t instanceof Array)for(var n=0,e=t.length;e>n;n++)t[n]=u.encodeObject(t[n]);else if("object"==("undefined"==typeof t?"undefined":(0,i.default)(t)))for(var r in t)t[r]=u.encodeObject(t[r]);else if("string"==typeof t)return u.encode(t);return t},loadScript:function(t){var n=document.createElement("script");document.getElementsByTagName("body")[0].appendChild(n),n.setAttribute("src",t)},addLoadEvent:function(t){var n=window.onload;"function"!=typeof window.onload?window.onload=t:window.onload=function(){n(),t()}}}}();t.exports=u},function(t,n){function e(t,n){t.classList?t.classList.add(n):t.className+=" "+n}t.exports=e},function(t,n){function e(t,n){if(t.classList)t.classList.remove(n);else{var e=new RegExp("(^|\\b)"+n.split(" ").join("|")+"(\\b|$)","gi");t.className=t.className.replace(e," ")}}t.exports=e},,,function(t,n){"use strict";function e(){var t=document.querySelector("#page-nav");if(t&&!document.querySelector("#page-nav .extend.prev")&&(t.innerHTML='<a class="extend prev disabled" rel="prev">&laquo; Prev</a>'+t.innerHTML),t&&!document.querySelector("#page-nav .extend.next")&&(t.innerHTML=t.innerHTML+'<a class="extend next disabled" rel="next">Next &raquo;</a>'),yiliaConfig&&yiliaConfig.open_in_new){var n=document.querySelectorAll(".article-entry a:not(.article-more-a)");n.forEach(function(t){var n=t.setAttribute("target");n&&""!==n||t.setAttribute("target","_blank")})}var e=document.querySelector("#js-aboutme");e&&0!==e.length&&(e.innerHTML=e.innerText)}t.exports={init:e}},,,,,,,,,function(t,n){function e(t,n){if("string"==typeof n)return t.insertAdjacentHTML("afterend",n);var e=t.nextSibling;return e?t.parentNode.insertBefore(n,e):t.parentNode.appendChild(n)}t.exports=e}])</script><script src="/./main.05aabf.js"></script><script>!function(){var e=function(e){var t=document.createElement("script");document.getElementsByTagName("body")[0].appendChild(t),t.setAttribute("src",e)};e("/slider.885efe.js")}()</script>
+
+
+    
+<div class="tools-col" q-class="show:isShow,hide:isShow|isFalse" q-on="click:stop(e)">
+  <div class="tools-nav header-menu">
+    
+    
+      
+      
+      
+    
+      
+      
+      
+    
+    
+
+    <ul style="width: 70%">
+    
+    
+      
+      <li style="width: 50%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      
+        
+      
+      <li style="width: 50%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
+      
+        
+    </ul>
+  </div>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all" q-show="innerArchive">
+        <div class="search-wrap">
+          <input class="search-ipt" q-model="search" type="text" placeholder="find something…">
+          <i class="icon-search icon" q-show="search|isEmptyStr"></i>
+          <i class="icon-close icon" q-show="search|isNotEmptyStr" q-on="click:clearChose(e)"></i>
+        </div>
+        <div class="widget tagcloud search-tag">
+          <p class="search-tag-wording">tag:</p>
+          <label class="search-switch">
+            <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
+          </label>
+          <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">html</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">svg</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">vuex</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">axios</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">vuex1.0</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">vuex使用方法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">体会</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
+              </li>
+            
+            <div class="clearfix"></div>
+          </ul>
+        </div>
+        <ul class="search-ul">
+          <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
+            缺失模块。<br/>1、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
+            2、在根目录_config.yml里添加配置：
+<pre style="font-size: 12px;" q-show="jsonFail">
+  jsonContent:
+    meta: false
+    pages: false
+    posts:
+      title: true
+      date: true
+      path: true
+      text: true
+      raw: false
+      content: false
+      slug: false
+      updated: false
+      comments: false
+      link: false
+      permalink: false
+      excerpt: false
+      categories: false
+      tags: true
+</pre>
+          </p>
+          <li class="search-li" q-repeat="items" q-show="isShow">
+            <a q-attr="href:path|urlformat" class="search-title"><i class="icon-quo-left icon"></i><span q-text="title"></span></a>
+            <p class="search-time">
+              <i class="icon-calendar icon"></i>
+              <span q-text="date|dateformat"></span>
+            </p>
+            <p class="search-tag">
+              <i class="icon-price-tags icon"></i>
+              <span q-repeat="tags" q-on="click:choseTag(e, name)" q-text="name|tagformat"></span>
+            </p>
+          </li>
+        </ul>
+    	</section>
+    
+
+    
+
+    
+    	<section class="tools-section tools-section-me" q-show="aboutme">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">君不见黄河之水天上来，奔流到海不复回。&lt;br&gt;君不见高堂明镜悲白发，朝如青丝暮成雪。&lt;br&gt;人生得意须尽欢，莫使金樽空对月。&lt;br&gt;天生我材必有用，千金散尽还复来。&lt;br&gt;烹羊宰牛且为乐，会须一饮三百杯。&lt;br&gt;岑夫子，丹丘生，将进酒，君莫停。&lt;br&gt;......&lt;br&gt;</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>
